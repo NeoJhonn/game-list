@@ -18,7 +18,9 @@ public class Game {
     private String platform;
     private Double score;
     private String imgUrl;
+    @Column(columnDefinition = "TEXT")// aceita textos longos
     private String shortDescription;
+    @Column(columnDefinition = "TEXT")// aceita textos longos
     private String longDescription;
 
     public Game() {
