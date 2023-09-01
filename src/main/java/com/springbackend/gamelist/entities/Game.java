@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Game {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)// id vai ser auto incrementável
     private Long id;
     private String title;
     @Column(name = "game_year")

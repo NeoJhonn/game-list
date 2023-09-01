@@ -3,5 +3,5 @@ package com.springbackend.gamelist.repositories;
 import com.springbackend.gamelist.entities.Game;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface GameRepository extends JpaRepository<Game, Long> {
+public interface GameRepository extends JpaRepository<Game, Long> {// <TIpo de Entidade, Tipo do id>
 }
