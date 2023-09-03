@@ -1,6 +1,7 @@
 package com.springbackend.gamelist.dtos;
 
 import com.springbackend.gamelist.entities.Game;
+import com.springbackend.gamelist.projections.GameProjection;
 
 public class GameDTO {
 
@@ -15,6 +16,15 @@ public class GameDTO {
     }
 
     public GameDTO(Game entity) {
+        this.id = entity.getId();
+        this.title = entity.getTitle();
+        this.year = entity.getYear();
+        this.imgUrl = entity.getImgUrl();
+        this.shortDescription = entity.getShortDescription();
+    }
+
+    // Construtor para converter de GameProjection para GameDTO
+    public GameDTO(GameProjection entity) {
         this.id = entity.getId();
         this.title = entity.getTitle();
         this.year = entity.getYear();
