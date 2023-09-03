@@ -13,20 +13,20 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/games")//endpoint
+@RequestMapping(value = "/games")// ---> endpoint
 public class GameControllers {
 
     @Autowired
     private GameService service;
 
     @GetMapping
-    public List<GameDTO> findAll() {
+    public List<GameDTO> findAll() { // "/games" ---> endpoint
         List<GameDTO> result = service.findAll();
 
         return result;
     }
 
-    @GetMapping(value = "/{id}")
+    @GetMapping(value = "/{id}")// "/games/1" ---> endpoint
     public GameAllInfoDTO findById(@PathVariable Long id) {
         GameAllInfoDTO result = service.findById(id);
 
