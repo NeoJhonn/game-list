@@ -2,13 +2,11 @@ package com.springbackend.gamelist.controllers;
 
 import com.springbackend.gamelist.dtos.GameDTO;
 import com.springbackend.gamelist.dtos.GameListDTO;
+import com.springbackend.gamelist.dtos.ReplacementDTO;
 import com.springbackend.gamelist.services.GameListService;
 import com.springbackend.gamelist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -33,5 +31,10 @@ public class GameListControllers {
         List<GameDTO> result = gameService.findByList(listId);
 
         return result;
+    }
+
+    @PostMapping(value = "/{listId}/replacement")
+    public void move(@RequestBody ReplacementDTO body, @PathVariable Long listId) { // "/lists/1/replacement" ---> endpoint
+        gameListservice.move(listId, body.getSourceIndex(), body.getDestinationIndex());
     }
 }

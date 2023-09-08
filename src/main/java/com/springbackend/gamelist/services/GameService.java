@@ -33,8 +33,8 @@ public class GameService {
     }
 
     @Transactional(readOnly = true) // é uma boa prática declarar o seu método como Transactional(ACID)
-    public List<GameDTO> findByList(Long listID) {
-        List<GameProjection> result = repository.searchByList(listID);
+    public List<GameDTO> findByList(Long listId) {
+        List<GameProjection> result = repository.searchByList(listId);
 
         //uso o stream e map para converter para GameDTO
         return result.stream().map(g -> new GameDTO(g)).toList();
