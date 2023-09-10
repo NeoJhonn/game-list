@@ -17,7 +17,7 @@ BackEnd desenvolvido em Java/Spring Boot.
 <br>
 
 <p align="center">
-   <img alt="digrams-de-classes" src="" 
+   <img alt="digrams-de-classes" src="https://github.com/NeoJhonn/game-list/blob/main/Documentation/Diagrama_de_Classes.png" 
   width="80%">
   <br>
   <br>
