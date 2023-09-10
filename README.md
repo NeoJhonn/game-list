@@ -21,7 +21,7 @@ BackEnd desenvolvido em Java/Spring Boot.
   width="80%">
   <br>
   <br>
-  <img alt="endpoints" src="" 
+  <img alt="endpoints" src="https://github.com/NeoJhonn/game-list/blob/main/Documentation/Endpoints.png" 
   width="80%">
 </p>
 
